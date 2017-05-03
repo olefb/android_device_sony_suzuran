@@ -13,20 +13,30 @@
 # limitations under the License.
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := E6653,sumire
+TARGET_OTA_ASSERT_DEVICE := E6653,E6683,sumire
+
+TARGET_KERNEL_CONFIG := aosp_kitakami_sumire_defconfig
 
 # TWRP Recovery
 DEVICE_RESOLUTION := 1440x814
 TW_THEME := portrait_hdpi
 TW_IGNORE_ABS_MT_TRACKING_ID := true
 
-# Inherit AOSP Rhine common device parts
-$(call inherit-product, device/sony/sumire/aosp_e6653.mk)
+# Inherit kitakami common device parts
+$(call inherit-product, device/sony/sumire/device.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Inherit Omni GSM telephony parts
 PRODUCT_PROPERTY_OVERRIDES += telephony.lteOnGSMDevice=1
 $(call inherit-product, vendor/omni/config/gsm.mk)
 
 # Override Product Name for OmniROM
+PRODUCT_DEVICE := sumire
 PRODUCT_NAME := omni_sumire
 PRODUCT_MODEL := Xperia Z5
+PRODUCT_BRAND := Sony
+PRODUCT_MANUFACTURER := Sony
+
+# Suzu Props
+TARGET_SYSTEM_PROP += device/sony/sumire/system.prop

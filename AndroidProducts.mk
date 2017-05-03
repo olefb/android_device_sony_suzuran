@@ -14,7 +14,3 @@
 
 PRODUCT_MAKEFILES := \
 	$(LOCAL_DIR)/omni_sumire.mk
-
-#PRODUCT_MAKEFILES := $(LOCAL_DIR)/aosp_e6653.mk \
-#                     $(LOCAL_DIR)/aosp_e6683.mk
-
