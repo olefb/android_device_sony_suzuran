@@ -4,7 +4,7 @@
 		<resource name="sony_camera_0"  type="tz">/sys/class/thermal/thermal_zone0</resource>
 		<resource name="sony_camera_1"  type="tz">/sys/class/thermal/thermal_zone1</resource>
 		<resource name="bms"  type="tz">/sys/class/thermal/thermal_zone2</resource>
-		<resource name="bms"  type="tz">/sys/class/thermal/thermal_zone3</resource>
+		<resource name="flash_therm"  type="tz">/sys/class/thermal/thermal_zone3</resource>
 
 		<resource name="tsens_tz_sensor0"  type="tz">/sys/class/thermal/thermal_zone4</resource>
 		<resource name="tsens_tz_sensor1"  type="tz">/sys/class/thermal/thermal_zone5</resource>
