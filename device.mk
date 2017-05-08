@@ -79,8 +79,8 @@ PRODUCT_PROPERTY_OVERRIDES := \
     ro.usb.pid_suffix=1D9
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, device/sony/kitakami-common/platform_omni.mk)
-$(call inherit-product, vendor/sony/kitakami-sumire-caf/kitakami-sumire-caf-vendor.mk)
+$(call inherit-product, device/sony/kitakami-common/platform.mk)
+$(call inherit-product, vendor/sony/kitakami-sumire-caf/sumire-vendor.mk)
 
 # copy wlan firmware
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4356/device-bcm.mk)
