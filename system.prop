@@ -1,9 +1,4 @@
-ro.semc.version.fs_revision=32.3.A.2.33
+# SEMC
 ro.semc.product.model=E6653
-ro.semc.ms_type_id=PM-0900-BV
-ro.semc.version.fs=GENERIC
 ro.semc.product.name=Xperia Z5
 ro.semc.product.device=E66
-
-ro.semc.version.cust=OmniROM
-ro.semc.version.cust_revision=7.1.2_NHG47L
