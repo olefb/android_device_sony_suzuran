@@ -20,6 +20,13 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_COPY_FILES := \
     $(DEVICE_PATH)/rootdir/system/etc/audio_policy.conf:system/etc/audio_policy.conf \
+    $(DEVICE_PATH)/rootdir/system/etc/audio_output_policy.conf:system/etc/audio_output_policy.conf \
+    $(DEVICE_PATH)/rootdir/system/etc/audio_effects.conf:system/etc/audio_effects.conf \
+    $(DEVICE_PATH)/rootdir/system/etc/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml \
+    $(DEVICE_PATH)/rootdir/system/etc/audio_policy_volumes.xml:system/etc/audio_policy_volumes.xml \
+    $(DEVICE_PATH)/rootdir/system/etc/mixer_paths_i2s.xml:system/etc/mixer_paths_i2s.xml \
+    $(DEVICE_PATH)/rootdir/system/etc/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
+    $(DEVICE_PATH)/rootdir/system/etc/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml \
     $(DEVICE_PATH)/rootdir/system/etc/BCM4356.hcd:system/etc/firmware/BCM43xx.hcd \
     $(DEVICE_PATH)/rootdir/system/etc/wifi/bcmdhd.cal:system/etc/wifi/bcmdhd.cal \
     $(DEVICE_PATH)/rootdir/system/etc/sensors/sensor_def_qcomdev.conf:system/etc/sensors/sensor_def_qcomdev.conf \
