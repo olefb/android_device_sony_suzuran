@@ -16,6 +16,8 @@ include device/sony/kitakami-common/PlatformConfig.mk
 
 TARGET_BOOTLOADER_BOARD_NAME := E6653
 
+TARGET_CAMERASERVICE_CLOSES_NATIVE_HANDLES := true
+
 WIFI_BUS := PCIE
 
 BOARD_KERNEL_CMDLINE += androidboot.hardware=sumire
