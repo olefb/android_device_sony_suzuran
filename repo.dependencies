@@ -1,0 +1,8 @@
+[
+  {
+    "remote":       "choose-a",
+    "repository":   "choose-a/android_device_sony_kitakami-common",
+    "target_path":  "device/sony/kitakami-common",
+    "revision":     "choose-7.1"
+  }
+]

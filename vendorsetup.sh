@@ -14,6 +14,6 @@
 # limitations under the License.
 #
 
-add_lunch_combo omni_sumire-userdebug
+add_lunch_combo choose_sumire-userdebug
 #add_lunch_combo aosp_e6653-userdebug
 #add_lunch_combo aosp_e6683-userdebug

@@ -24,17 +24,16 @@ TW_IGNORE_ABS_MT_TRACKING_ID := true
 
 # Inherit kitakami common device parts
 $(call inherit-product, device/sony/sumire/device.mk)
-$(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
-$(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Inherit Omni GSM telephony parts
 PRODUCT_PROPERTY_OVERRIDES += telephony.lteOnGSMDevice=1
-$(call inherit-product, vendor/omni/config/gsm.mk)
+$(call inherit-product, vendor/choose-a/config/gsm.mk)
 
 # Override Product Name for OmniROM
 PRODUCT_DEVICE := sumire
-PRODUCT_NAME := omni_sumire
+PRODUCT_NAME := choose_sumire
 PRODUCT_MODEL := Xperia Z5
 PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony

@@ -1,8 +1,0 @@
-[
-  {
-    "remote":       "omnirom",
-    "repository":   "android_device_sony_kitakami-common",
-    "target_path":  "device/sony/kitakami-common",
-    "revision":     "android-7.1"
-  }
-]
