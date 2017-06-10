@@ -14,12 +14,12 @@
 
 include device/sony/kitakami-common/PlatformConfig.mk
 
-TARGET_BOOTLOADER_BOARD_NAME := E6653
+TARGET_BOOTLOADER_BOARD_NAME := E5823
 
 TARGET_CAMERASERVICE_CLOSES_NATIVE_HANDLES := true
 
-WIFI_BUS := PCIE
+WIFI_BUS := SDIO
 
-BOARD_KERNEL_CMDLINE += androidboot.hardware=sumire
+BOARD_KERNEL_CMDLINE += androidboot.hardware=suzuran
 
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/clearpad/wakeup_gesture"

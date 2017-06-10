@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Device path
-DEVICE_PATH := device/sony/sumire
+DEVICE_PATH := device/sony/suzuran
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay
@@ -27,7 +27,7 @@ PRODUCT_COPY_FILES := \
     $(DEVICE_PATH)/rootdir/system/etc/mixer_paths_i2s.xml:system/etc/mixer_paths_i2s.xml \
     $(DEVICE_PATH)/rootdir/system/etc/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
     $(DEVICE_PATH)/rootdir/system/etc/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml \
-    $(DEVICE_PATH)/rootdir/system/etc/BCM4356.hcd:system/etc/firmware/BCM43xx.hcd \
+    $(DEVICE_PATH)/rootdir/system/etc/BCM43455.hcd:system/etc/firmware/BCM43xx.hcd \
     $(DEVICE_PATH)/rootdir/system/etc/wifi/bcmdhd.cal:system/etc/wifi/bcmdhd.cal \
     $(DEVICE_PATH)/rootdir/system/etc/sensors/sensor_def_qcomdev.conf:system/etc/sensors/sensor_def_qcomdev.conf \
     $(DEVICE_PATH)/rootdir/system/etc/thermanager.xml:system/etc/thermanager.xml \
@@ -52,26 +52,26 @@ PRODUCT_COPY_FILES += \
 
 # Device Init
 PRODUCT_PACKAGES += \
-    init.recovery.sumire \
-    init.sumire \
-    ueventd.sumire
+    init.recovery.suzuran \
+    init.suzuran \
+    ueventd.suzuran
 
 # Lights
 PRODUCT_PACKAGES += \
-    lights.sumire
+    lights.suzuran
 
 # Simple PowerHAL
 PRODUCT_PACKAGES += \
-    power.sumire
+    power.suzuran
 
 # Fingerprint HAL
 PRODUCT_PACKAGES += \
     fingerprintd \
-    fingerprint.sumire
+    fingerprint.suzuran
 
 # NFC config
 PRODUCT_PACKAGES += \
-    nfc_nci.sumire
+    nfc_nci.suzuran
 
 # Telephony Packages (AOSP)
 PRODUCT_PACKAGES += \
@@ -79,16 +79,16 @@ PRODUCT_PACKAGES += \
     Stk
 
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+PRODUCT_AAPT_PREBUILT_DPI := xhdpi hdpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 PRODUCT_PROPERTY_OVERRIDES := \
-    ro.sf.lcd_density=480 \
-    ro.usb.pid_suffix=1D9
+    ro.sf.lcd_density=320 \
+    ro.usb.pid_suffix=1DA
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/sony/kitakami-common/platform.mk)
-$(call inherit-product, vendor/sony/kitakami-sumire-caf/sumire-vendor.mk)
+$(call inherit-product, vendor/sony/kitakami-suzuran-caf/suzuran-vendor.mk)
 
 # copy wlan firmware
-$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4356/device-bcm.mk)
+$(call inherit-product-if-exists, vendor/broadcom/wlan/bcmdhd/firmware/bcm43455/device-bcm.mk)

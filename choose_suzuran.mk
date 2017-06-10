@@ -12,15 +12,30 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-TARGET_KERNEL_CONFIG := aosp_kitakami_sumire_defconfig
+# Assert
+TARGET_OTA_ASSERT_DEVICE := E5803,E5823,suzuran
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, device/sony/sumire/device.mk)
+TARGET_KERNEL_CONFIG := aosp_kitakami_suzuran_defconfig
+
+# TWRP Recovery
+TW_THEME := portrait_hdpi
+TW_IGNORE_ABS_MT_TRACKING_ID := true
+
+# Inherit kitakami common device parts
+$(call inherit-product, device/sony/suzuran/device.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-PRODUCT_NAME := aosp_e6653
-PRODUCT_DEVICE := sumire
-PRODUCT_MODEL := Xperia Z5 (AOSP)
+# Inherit Choose-A GSM telephony parts
+PRODUCT_PROPERTY_OVERRIDES += telephony.lteOnGSMDevice=1
+$(call inherit-product, vendor/choose-a/config/gsm.mk)
+
+# Override Product Name for Choose-A
+PRODUCT_DEVICE := suzuran
+PRODUCT_NAME := choose_suzuran
+PRODUCT_MODEL := Xperia Z5 Compact
 PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony
+
+# Suzuran Props
+TARGET_SYSTEM_PROP += device/sony/suzuran/system.prop

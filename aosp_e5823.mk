@@ -12,17 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+TARGET_KERNEL_CONFIG := aosp_kitakami_suzuran_defconfig
+
 # Inherit from those products. Most specific first.
-$(call inherit-product, device/sony/sumire/aosp_e6653.mk)
+$(call inherit-product, device/sony/suzuran/device.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# DualSim
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.multisim.config=dsds \
-    persist.radio.multisim.config=dsds \
-    ro.telephony.default_network=9,1
-
-PRODUCT_NAME := aosp_e6683
-PRODUCT_DEVICE := sumire
-PRODUCT_MODEL := Xperia Z5 Dual (AOSP)
+PRODUCT_NAME := aosp_e5823
+PRODUCT_DEVICE := suzuran
+PRODUCT_MODEL := Xperia Z5 Compact (AOSP)
 PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony
