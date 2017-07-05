@@ -924,3 +924,5 @@ lib/hw/fingerprint.msm8994.so
 lib/libcom_fingerprints_service.so
 lib64/hw/fingerprint.msm8994.so
 lib64/libcom_fingerprints_service.so
+
+vendor/lib64/libuiblur.so|8d0275c4071423cad99862f50b79075db0807ad2
